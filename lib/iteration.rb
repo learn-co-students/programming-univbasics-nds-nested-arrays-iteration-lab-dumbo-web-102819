@@ -1,3 +1,5 @@
+require 'pry'
+
 def join_ingredients(src)
   # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   #
@@ -6,12 +8,23 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
+  final_array = Array.new
+  src.each do |element|
+    new_string = "I love #{element[0]} and #{element[1]} on my pizza"
+    final_array << new_string
+  end
+  final_array
 end
 
 def find_greater_pair(src)
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
+  final_array = Array.new
+  src.each do |element|
+    element[0] > element[1] ? final_array << element[0] : final_array << element[1]
+  end
+  final_array
 end
 
 def total_even_pairs(src)
@@ -22,4 +35,9 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+  total = 0
+  src.each do |element|
+    total += element[0] + element[1] if element[0] % 2 == 0 && element[1] % 2 == 0
+  end
+  total
 end
