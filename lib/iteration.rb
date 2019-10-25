@@ -23,3 +23,19 @@ def total_even_pairs(src)
   # the number was even. Review the operator documentation if you've forgotten
   # this!
 end
+
+ #
+  # "I love (inner array element 0) and (inner array element 1) on my pizza""
+  # As such, there should be a new String for each inner array, or pair
+
+  foods=[ ["cheese", "no cheese"], ["grilled chicken", "pepperoni"]
+  puts ('I love my pizza with' + array[0] + "and"+ array[1])
+end
+
+def find_greater_pair(src)
+  # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
+  # Produce a new Array that contains the larger number of each of the pairs
+  # that are in the inner Arrays
+  src = [ :group1[1, 5] :group2[34,11]]
+  srcg = [group1.max, group2.max]
+end
